@@ -4,13 +4,13 @@
 
 ## *APIs*
 #### CRUD for employee REST API
-- CRUD for a single employee
-- Get employees by list of IDs
+- CRUD for a single employee `done`
+- Get employees by list of IDs `TODO`
 - Employee search by criteria ( name, department )
 - Paginated employee search
 
 #### CRUD for department REST API
-- CRUD for single department
+- CRUD for single department `in-progress`
 - API to add and remove employees in a department
   - Check if the employee exists in any other department or not
 
