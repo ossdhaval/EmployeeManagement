@@ -1,36 +1,34 @@
-package com.ifour.EmployeeManagement.Employee;
+package com.ifour.EmployeeManagement.Department;
 
 import javax.persistence.*;
 
 @Entity
 @Table
-public class Employee {
-    @Id
-    @SequenceGenerator(name="employee_sequence",
-    sequenceName="employee_sequence",
-    allocationSize=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "employee_sequence"
-    )
+//@SecondaryTable(name = "EmployeeInDepartment", pkJoinColumns = @PrimaryKeyJoinColumn( name = "dept_id"))
+public class EmployeeInDepartment {
     private int id;
     private String name;
     private String dept;
-    private long salary;
+    private int salary;
+    @Id
+    private int dept_id;
 
-    public Employee() {
+    public EmployeeInDepartment() {
     }
 
-    public Employee(int id, String name, String dept, long salary) {
+    public EmployeeInDepartment(int id, String name, String dept, int salary, int dept_id) {
         this.id = id;
         this.name = name;
         this.dept = dept;
         this.salary = salary;
+        this.dept_id = dept_id;
     }
 
-    public Employee(String name, String dept, long salary) {
+    public EmployeeInDepartment(String name, String dept, int salary, int dept_id) {
         this.name = name;
         this.dept = dept;
         this.salary = salary;
+        this.dept_id = dept_id;
     }
 
     public int getId() {
@@ -57,21 +55,19 @@ public class Employee {
         this.dept = dept;
     }
 
-    public long getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(long salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dept='" + dept + '\'' +
-                ", salary=" + salary +
-                '}';
+    public int getDept_id() {
+        return dept_id;
+    }
+
+    public void setDept_id(){
+        this.dept_id = dept_id;
     }
 }

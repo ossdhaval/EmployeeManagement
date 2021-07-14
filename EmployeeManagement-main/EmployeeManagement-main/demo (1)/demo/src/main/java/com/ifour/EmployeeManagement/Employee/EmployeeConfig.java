@@ -12,13 +12,12 @@ public class EmployeeConfig {
     CommandLineRunner commandLineRunner(EmployeeRepository repository)
     {
         return args -> {
-             Employee yash = new Employee("yash","java",15000);
-            Employee hemanshu = new Employee("hemanshu","angular",15000);
-            Employee ishan = new Employee("yash",".net",15000);
-
-
+             Employee yash = new Employee("Yash",15000,101);
+            Employee hemanshu = new Employee("Himanshu",15000,102);
+            Employee ishan = new Employee("Ishaan",15000,103);
+            repository.saveAll(List.of(yash,hemanshu,ishan));
         };
-        repository.saveAll(List.of(yash,hemanshu,ishan));
+
     }
 
 }
