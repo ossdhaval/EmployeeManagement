@@ -49,3 +49,10 @@
 - Github pages integration
 - Integration with Jenkins
 - Integration with static code analysis
+
+# **Iteration 3**
+
+- Implement simple JDBC and remove data-JPA
+- Implement in-memory cache using hashmap for each microservices
+- Implement all search functionalities using this cache and not database queries
+- Implement sort order in each search API
