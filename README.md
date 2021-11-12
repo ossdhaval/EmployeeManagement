@@ -56,3 +56,10 @@
 - Implement in-memory cache using hashmap for each microservices
 - Implement all search functionalities using this cache and not database queries
 - Implement sort order in each search API
+- Implement DB connection pool
+  - datastructure or structures to hold connection
+  - you should be able to know which connection object is in use
+  - public getConnection()
+  - private createNewConnection()
+  - there should be an upper limit on how many db connections can be created by DB pool
+  - there should be a lower limit or an initialization number which will determine how many connections will be created at the time of db pool initialization
